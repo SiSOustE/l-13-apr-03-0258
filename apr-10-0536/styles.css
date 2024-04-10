@@ -1,65 +1,48 @@
 /* 360*740  768*1024  1024*1366 */
+/* First mobil */
 :root{
-  --b-color:#68a;
+  --border-color-1:#68a;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* .contour-small {
-  width: 320px;
-  height: 700px;
-  border: #aaa 2px dashed;
-  border-radius: 1rem;
-  margin: 8px;
-  padding: 8px;
-}
-.contour-middle {
-  width: 768px;
-  height: 1024px;
-  border: #aaa 2px dashed;
-  border-radius: 1rem;
-  margin: 8px;
-  padding: 8px;
-}
-.contour-big {
-  width: 1024px;
-  height: 1366px;
-  border: #aaa 2px dashed;
-  border-radius: 1rem;
-  margin: 8px;
-  padding: 8px;
-} */
+* {margin: 0; padding: 0;}
+body {margin: 0; padding: 0;}
 form {
-  min-width: 1vw;
-  width: 25%;
-  /* width: 1vw; */
-  margin: 1rem;
-  padding: .33rem;
-  display:
-  flex;
+  /* min-width: 1vw; */
+  width: 300px;
+  display: flex;
   flex-direction: column;
+  padding: .33rem;
   flex-wrap: wrap;
+  margin: 1rem;
+  /* font-size: 10px; */
   box-sizing: border-box;
-  border: 2px solid var(--b-color);
+  border: 2px solid var(--border-color-1);
   border-radius: .25rem;
 }
-
-input {
-  margin: 0 0 .25rem 0;
-  width: 50%;
+input {margin: 0 0 .25rem 0; width: 50%;}
+.container-control{
+  display: flex; flex-direction: column;
+  margin: 2px; padding: 2px; border: 1px dashed #aaa;
 }
-
-select {}
-
-/* @media screen and (min-width: 768px) {
+label{margin: 2px 6px 2px 6px;}
+@media screen and (max-width: 768px) {
+  form {
+    flex-direction: column;
+    width: 92%;
+    font-size: 20px;
+  }
+  input {
+    margin: 0 6px 6px 6px;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1024px) {
   form {
     flex-direction: row;
+    width: 1000px;
+    font-size: 16px;
   }
-} */
+  input {
+    margin: 0 6px 6px 6px;
+    width: 150px;
+  }
+}
