@@ -3,29 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>10-0042</title>
+  <title>Controls from speaker / apr-12-0007</title>
   <link rel="stylesheet" href="styles.css">
-  <style></style>
-</head>
-<body>
-  <!-- <header> -->
-    <!-- <div class="frame-1"></div> <div class="frame-2"></div> <div class="frame-1"></div> -->
-    <form action="" method="get">
-      <div class="container-control">
-        <label for="login">Логин</label>
-        <input type="text" id="login" placeholder="login" maxlength="10" required>
-      </div>
-      <div class="container-control">
-        <label for="password">Пароль</label>
-        <input type="password" id="password" placeholder="password" minlength="8" required>
-      </div>
-      <div class="container-control">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="email" required>
-      </div>
-    </form>
-    
-<!-- </header> -->
+  <title>HTML Form: a11y</title>
+    <meta charset="UTF-8" />
 
-</body>
+    <style>
+      button,
+      select {
+        cursor: pointer;
+      }
+
+      fieldset {
+        margin: 25px 0;
+      }
+
+      button:hover {
+        background: black;
+        color: #fff;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- Контейнер -->
+    <article class="container">
+
+      <!-- Внутренний блок -->
+      <div class="block">
+
+        <section class="block__item block-item">
+          <h2 class="block-item__title">У вас уже есть аккаунт?</h2>
+          <button class="block-item__btn signin-btn">Войти</button>
+        </section>
+        <section class="block__item block-item">
+          <h2 class="block-item__title">У вас нет аккаунта?</h2>
+          <button class="block-item__btn signup-btn">Зарегистрироваться</button>
+        </section>
+
+      </div>
+
+        <!-- Блок формы -->
+      <div class="form-box">
+
+<!-- Форма регистрац -->
+        <form action="#" class="form form_signin">
+          <h3 class="form__title">Вход</h3>
+
+          <p>
+             <input type="text" class="form__input" placeholder="Логин">
+          </p>
+          <p>
+            <input type="password" class="form__input" placeholder="Пароль">
+          </p>
+          <p>
+            <button class="form__btn">Войти</button>
+          </p>
+          <p>
+            <a href="#" class="form__forgot">Восстановить пароль</a>
+          </p>
+        </form>
+
+        <!-- Форма регистрации -->
+        <form action="#" class="form form_signup">
+          <h3 class="form__title">Регистрация</h3>
+
+          <p>
+             <input type="text" class="form__input" placeholder="Логин">
+          </p>
+          <p>
+             <input type="email" class="form__input" placeholder="Email">
+          </p>
+          <p>
+            <input type="password" class="form__input" placeholder="Пароль">
+          </p>
+          <p>
+            <input type="password" class="form__input" placeholder="Подтвердите пароль">
+          </p>
+          <p>
+            <button class="form__btn
+            form__btn_signup">Зарегистрироваться</button>
+          </p>
+        </form>
+
+      </div>
+
+    </article>
+  </body>
 </html>
