@@ -1,0 +1,111 @@
+body {background-color: whitesmoke;
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #b4d3ee;
+}
+form {
+  padding: 10px;
+  background-color: #eee;
+  width: 100vh;
+}
+.line-1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+button,
+select {
+  cursor: pointer;
+}
+h2 {
+  font-size: 3rem;
+  background-color: slateblue;
+  color: wheat;
+  padding: 1rem 2rem;
+  font-weight: 500;
+}
+label{
+  color: darkblue;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+fieldset {
+  display: flex;
+}
+.quote {
+  margin-top: 1rem;
+}
+legend {
+  color: darkgreen;
+}
+select {
+width: 25%;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 1.4em;
+margin-right: 1rem;
+color: darkblue;
+}
+textarea {margin-right:1rem; margin-left:.25rem;
+  width: 8rem;
+  border-radius: 12%;
+}
+button {
+  background-color: slateblue;
+  border: none ;
+  color: blanchedalmond;
+  border-radius: 12%;
+}
+button:hover {
+  background: steelblue;
+  color: #fff;
+}
+input[type="text"] {
+  margin: 5px;
+}
+/* ======================================= */
+/* 360x740 (Samsung Galaxy S8+) */
+@media screen and (min-width: 360px) {
+  h2 {font-size: 6rem;}
+  fieldset {
+    flex-direction: column;
+  }
+  textarea {width: 25%; height: 100px; margin-bottom: 2rem;}
+  label {font-size: 3rem;}
+  select {
+    width: 55px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    margin-right: 1rem;
+    color: darkblue;
+  }
+  fieldset.quote {
+    flex-direction: row;
+    align-items: center;
+    width: 68%;
+  }
+  button {height: 50px;}
+}
+/* 768 x1024 (iPad Mini) */
+@media screen and (min-width:768px) {
+  legend {font-size: 2em;}
+  fieldset.quote {
+  width: 86%;
+}
+select {width: 100%;}
+/* 1024 x 600  (Nest Hub)*/
+@media screen and (min-width: 1024px) {
+  form {
+    padding: 10px;
+    width: 100%;
+  }
+  h2 {font-size: 3rem;}
+  fieldset {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  select, legend  {font-size: 1.5rem;}
+  label {font-size: 1.5rem;}
+  button {height: 35px; font-size: 1em;}
+}
